@@ -140,7 +140,6 @@ Promise.all([api.getUserInfo(), api.getAllPlaces()])
 const popupEditAvatarElement = document.querySelector(config.selectorPopupEditeAvatar);
 const formEditeAvatarElement = popupEditAvatarElement.querySelector('.popup__form');
 const editAvatarButtonElement = document.querySelector(config.selectorAvatar);
-const imageAvatarElement = document.querySelector(config.selectorImageAvatar);
 
 const popupEditAvatar = new PopupWithForm(popupEditAvatarElement, submitEditAvatarForm, formValidationConfig);
 popupEditAvatar.setListeners();

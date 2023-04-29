@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,34 +8,34 @@
   </head>
   <body class="page">
     <header class="header">
-      <img src="<%=require('./images/header-logo.svg')%>" alt="Логотип Место" class="logo" />
+      <img src="<%=require('./images/header-logo.svg')%>" alt="Place Logo" class="logo" />
     </header>
     <main>
       <section class="profile">
         <div class="profile__info">
           <div class="profile__avatar">
-            <img class="profile__avatar-photo" src="#" alt="Фотография пользователя в профайле" />
+            <img class="profile__avatar-photo" src="#" alt="User profile photo" />
             <img
               class="profile__avatar-edit"
               src="<%=require('./images/Vector.svg')%>"
-              alt="Иконка редактирования аватарки"
+              alt="Avatar edit icon"
             />
           </div>
           <div class="profile__description">
             <h1 class="profile__name"></h1>
-            <button class="profile__edit-button" aria-label="Редактирование профиля" type="button"></button>
+            <button class="profile__edit-button" aria-label="Profile editing" type="button"></button>
             <p class="profile__job"></p>
           </div>
         </div>
-        <button class="profile__add-button" aria-label="Добавление контента в профиль" type="button"></button>
+        <button class="profile__add-button" aria-label="Adding content to your profile" type="button"></button>
       </section>
       <div class="place-container"></div>
     </main>
-    <footer class="footer">&copy; 2023 Mesto Russia</footer>
+    <footer class="footer">&copy; 2023 Place Sweden</footer>
     <div class="popup popup_type_edit">
       <div class="popup__container">
-        <button class="popup__button-close" aria-label="Закрытие окна редактирования" type="button"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
+        <button class="popup__button-close" aria-label="Closing the edit window" type="button"></button>
+        <h2 class="popup__title">Edit profile</h2>
         <form class="popup__form" name="profile" novalidate>
           <input
             id="input-name"
@@ -57,9 +57,9 @@
             maxlength="200"
           />
           <span id="input-job-error" class="error"></span>
-          <button type="submit" class="popup__button-save" aria-label="Сохранить изменения">
-            <h3 class="popup__button-title popup__button-visible">Сохранить</h3>
-            <h3 class="popup__button-title-load">Сохранение...</h3>
+          <button type="submit" class="popup__button-save" aria-label="Save Changes">
+            <h3 class="popup__button-title popup__button-visible">Save</h3>
+            <h3 class="popup__button-title-load">Preservation...</h3>
           </button>
         </form>
       </div>
@@ -68,10 +68,10 @@
       <div class="popup__container">
         <button
           class="popup__button-close"
-          aria-label="Закрытие окна добавления нового контента"
+          aria-label="Closing the window for adding new content"
           type="button"
         ></button>
-        <h2 class="popup__title">Новое место</h2>
+        <h2 class="popup__title">New place</h2>
         <form class="popup__form" name="profile" novalidate>
           <input
             id="input-place"
@@ -79,7 +79,7 @@
             maxlength="30"
             type="text"
             name="place"
-            placeholder="Название"
+            placeholder="Name"
             class="popup__input popup__input_data_place"
             required
           />
@@ -88,21 +88,21 @@
             id="input-link-card"
             type="url"
             name="link"
-            placeholder="Ссылка на картинку"
+            placeholder="Link to picture"
             class="popup__input popup__input_data_link"
             required
           />
           <span id="input-link-card-error" class="error"></span>
-          <button type="submit" class="popup__button-save" aria-label="Создать">
-            <h3 class="popup__button-title popup__button-visible">Создать</h3>
-            <h3 class="popup__button-title-load">Создание...</h3>
+          <button type="submit" class="popup__button-save" aria-label="Create">
+            <h3 class="popup__button-title popup__button-visible">Create</h3>
+            <h3 class="popup__button-title-load">Creation...</h3>
           </button>
         </form>
       </div>
     </div>
     <div class="popup popup_type_image popup_overley_dark">
       <div class="popup__container popup__container_type_image">
-        <button class="popup__button-close" aria-label="Закрытие окна редактирования" type="button"></button>
+        <button class="popup__button-close" aria-label="Closing the edit window" type="button"></button>
         <img src="#" alt="#" class="popup__picture" />
         <h3 class="popup__picture-title"></h3>
       </div>
@@ -110,29 +110,29 @@
 
     <div class="popup popup_type_deleteCard">
       <div class="popup__container">
-        <button class="popup__button-close" aria-label="Закрытие окна редактирования" type="button"></button>
-        <h2 class="popup__title">Вы уверены?</h2>
-        <button type="submit" class="popup__button-save" aria-label="Сохранить изменения">Да</button>
+        <button class="popup__button-close" aria-label="Closing the edit window" type="button"></button>
+        <h2 class="popup__title">Are you sure?</h2>
+        <button type="submit" class="popup__button-save" aria-label="Save Changes">Yes</button>
       </div>
     </div>
 
     <div class="popup popup_type_avatar">
       <div class="popup__container">
-        <button class="popup__button-close" aria-label="Закрытие окна редактирования" type="button"></button>
-        <h2 class="popup__title">Обновить аватар</h2>
+        <button class="popup__button-close" aria-label="Closing the edit window" type="button"></button>
+        <h2 class="popup__title">Update avatar</h2>
         <form class="popup__form" name="profile" novalidate>
           <input
             id="input-link-avatar"
             type="url"
             name="link"
-            placeholder="Ссылка на аватар"
+            placeholder="Link to avatar"
             class="popup__input popup__input_data_link"
             required
           />
           <span id="input-link-avatar-error" class="error"></span>
-          <button type="submit" class="popup__button-save" aria-label="Создать">
-            <h3 class="popup__button-title popup__button-visible">Сохранить</h3>
-            <h3 class="popup__button-title-load">Сохранение...</h3>
+          <button type="submit" class="popup__button-save" aria-label="Create">
+            <h3 class="popup__button-title popup__button-visible">Save</h3>
+            <h3 class="popup__button-title-load">Preservation...</h3>
           </button>
         </form>
       </div>
@@ -141,11 +141,11 @@
     <template class="place-template">
       <li class="element">
         <img class="element__image" src="#" alt="#" />
-        <button class="element__trash-button" aria-label="Удаление элемента" type="button"></button>
+        <button class="element__trash-button" aria-label="Removing an element" type="button"></button>
         <div class="element__description">
           <h2 class="element__name"></h2>
           <div class="element__like">
-            <button class="element__like-button" aria-label="Выбор понравившегося элемента" type="button"></button>
+            <button class="element__like-button" aria-label="Selecting the item you like" type="button"></button>
             <h3 class="element__like-amount"></h3>
           </div>
         </div>
