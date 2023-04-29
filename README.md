@@ -1,74 +1,75 @@
-# Проект: Mesto
+# study project "PLACE-JAVASCRIPT"
 
-## Обзор
-* Ссылка на GitHub Pages
-* Интро
-* Описание
+by Kseniia Tikhonova
 
-## Ссылка на GitHub Pages:
-* https://tikhonovaks.github.io/mesto/
+*place-javascript is an interactive webpage. Responsive web design. (italic)*
+*Place-javascript features include: adding, deleting (only created by you) and liking photos, opening a popup with a picture, editing a profile (avatar and personal information). (italic)*
 
-## Интро
+## Installation
 
-Учебный проект "Место", адаптивная вёрстка.
-Построение верстки согласно макету в Figma;
-При построение адаптивной верстки я отталкивалась от размеров экрана: 320, 768, 1024 и 1280 пикселей (согласно макету).
-Сайт должен отображаться корректно в Firefox, Google Chrome или Yandex Browser;
+1. To use "place-javascript", you will need to install Node.js on your computer. Once you have installed Node.js, you can clone the repository to your local machine using the following command:
 
-## Описание
+```
+git clone https://github.com/KseniiaTikhonovaJS/place-javascript.git
+```
+2. After cloning the repository, navigate to the project directory and install the necessary dependencies using the following command:
 
-### В проекте есть:
-* файлы index.html ,
-* директория blocks ,
-* директория pages с файлами index.css и index.js ,
-* папка images с картинками,
-* файлы скриптов Сard.js , FormValidator.js , UserInfo.js , Section.js , Popup.js , PopupWithForm.js, PicturePopup.js в директории components,
-* файл README.md ,
-* файл .gitignore с исключениями node_modules и dist .
+```
+npm install
+```
 
-### Webpack настроен:
-* установлены webpack , webpack-cli и webpack-dev-server ;
-* настроены сборки build и dev ;
-* скрипты созданы в package.json ;
-* настроена минификация и транспиляция JS-бабелем. Webpack собирает весь JavaScript в один файл и
-* автоматически добавляет в HTML тег script со ссылкой на него;
-* настроена обработка CSS;
-* настроена минификация CSS и автоматическое добавление вендорных префиксов;
-* настроена обработка изображений и шрифтов;
-* если в HTML есть ссылки на локальные картинки, при сборке всё работает.
+## Usage
 
-### Стили подключены в отдельном файле.
+To run "place-javascript" on your local machine, navigate to the project directory and use the following command:
 
-### Соблюдена методология и файловая структура по БЭМ.
+```
+npm run build
+```
+This will start the development server and open "place-javascript" in your default browser. You can then interact with the page by adding, deleting, and liking photos, as well as editing your profile.
+If the page does not open automatically in the browser, you can open it manually: /dist/index.html
 
-### Функциональность:
-* 6 карточек создаются при помощи JS;
-* форма добавления карточки свёрстана, открывается, добавляет карточку;
-* работает нажатие на кнопку лайка;
-* удаление карточки реализовано корректно;
-* модальные окна закрываются на любых разрешениях экрана;
-* модальное окно с картинкой открывается, изображение не теряет пропорции;
-* реализовано плавное открытие и закрытие модального окна CSS-стилями;
-* для всех полей ввода в формах включена лайв-валидация;
-* кнопка отправки формы неактивна, если хотя бы одно из полей не проходит валидацию;
-* модальное окно закрывается по клику в любом месте вне этого окна и по нажатию на Esc .
+## Description
 
-### Проверка данных:
-* данные любого поля ввода проверяются одной унифицированной функцией;
-* для проверки данных в поле используются HTML5-атрибуты и JS-свойство ValidityState ;
-* за состояние кнопки сабмита отвечает отдельная функция;
-* за включение валидации формы отвечает функция enableValidation ;
+### Webpack set up:
+* installed webpack , webpack-cli and webpack-dev-server ;
+* configured build and dev builds;
+* scripts are created in package.json ;
+* configured minification and transpilation with JS babel. Webpack bundles all JavaScript into one file and
+* automatically adds a script tag to HTML with a link to it;
 
-### Код объектно-ориентирован.
-* Использованы ES6-классы.
-* Каждый класс описан в отдельном JS-файле и импортирован в index.js .
-* Каждый класс выполняет строго одну задачу. Всё, что относится к решению этой задачи, находится в
-классе.
-* Для описания взаимодействия между классами используется слабое связывание, то есть внутри классов
-напрямую не создаются экземпляры других классов.
+### Styles included in a separate file.
 
-### Код не повторяется. Если строчка нужна в нескольких местах, она вынесена в отдельную функцию.
+### Complied with BEM methodology and file structure.
 
-### Доступность интерфейса
-* Все ссылки и интерактивные элементы имеют состояние наведения :hover .
-* Контентные изображения имеют alt с корректным описанием, соответствующим языку страницы.
+### Functionality:
+* 6 cards are created using JS;
+* the form for adding a card is laid out, opens, adds a card;
+* click on the like button works;
+* deleting the card is implemented correctly;
+* modal windows close at any screen resolution;
+* a modal window with a picture opens, the image does not lose its proportions;
+* Implemented smooth opening and closing of the modal window with CSS styles;
+* for all input fields in forms, live validation is enabled;
+* the form submit button is inactive if at least one of the fields does not pass validation;
+* the modal window is closed by clicking anywhere outside this window and by pressing Esc .
+
+### Data checking:
+* the data of any input field is checked by one unified function;
+* HTML5 attributes and the ValidityState JS property are used to validate the data in the field;
+* a separate function is responsible for the state of the submit button;
+* the enableValidation function is responsible for enabling form validation;
+
+### The code is object-oriented.
+* Used ES6 classes.
+* Each class is described in a separate JS file and imported into index.js .
+* Each class performs strictly one task. Everything related to the solution of this problem is in
+class.
+* Weak coupling is used to describe the interaction between classes, that is, within classes
+instances of other classes are not directly instantiated.
+
+### The code is not repeated. If a line is needed in several places, it is moved to a separate function.
+
+### Interface accessibility
+* All links and clickable elements have a hover state of :hover .
+* Content images have an alt with a correct description corresponding to the language of the page.
+

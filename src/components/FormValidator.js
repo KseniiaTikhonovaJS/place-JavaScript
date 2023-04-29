@@ -9,7 +9,7 @@ class FormValidator {
   }
 
   /**
-   * Активировать валидацию формы
+   * Activate form validation
    */
   enableValidation() {
     this._form.addEventListener('submit', this._disableSubmit);
@@ -21,7 +21,7 @@ class FormValidator {
   }
 
   /**
-   * Отменить отправку формы на бэкэнд
+   * Cancel form submission on backend
    * @param {*} event
    */
   _disableSubmit(event) {
@@ -31,13 +31,11 @@ class FormValidator {
     setTimeout(() => this._toggleButton(), 0);
   }
   /**
-   * Обработать ввод в Input
-   * @param {*} event событие input
+   * Process input in Input
+   * @param {*} event
    */
   _handleFormInput(event) {
-    const input = event.target; //event.target - ссылка на элемент, на котором сработало это событие
-    // добавляем класс нашему инпуту (когла все валидно удаляем класс, когда не валидно оставляем):
-
+    const input = event.target;
     const inputId = input.id;
     const errorElement = document.querySelector(`#${inputId}-error`);
 
@@ -51,7 +49,7 @@ class FormValidator {
   }
 
   /**
-   * Переключить кнопку
+   * Toggle button
    */
   _toggleButton() {
     const isFormValid = this._form.checkValidity(); //проверка всей формы на валидность
@@ -61,7 +59,7 @@ class FormValidator {
   }
 
   /**
-   * Добавить обработчики событий инпутам формы
+   * Add event handlers to form inputs
    */
   _addInputListners() {
     const inputList = Array.from(this._form.querySelectorAll(this._config.inputSelector));
